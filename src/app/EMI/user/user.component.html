@@ -1,0 +1,26 @@
+<form (ngSubmit)="onsubmit()">
+
+   <div class="input-group">
+      <p>
+         <label for="totalAmount">Total Amount</label>
+         <input type="number" name="totalAmount" id="totalAmount" [(ngModel)]="enteredTotalAmout">
+      </p>
+      <p>
+         <label for="downpayment">Down payment</label>
+         <input type="number" name="downpayment" id="downpayment" [(ngModel)]="enteredDownPayment">
+      </p>
+   </div>
+   <div class="input-group">
+      <p>
+         <label for="annualInterestRate">Annual Interest Rate</label>
+         <input type="number" name="annualInterestRate" id="annualInterestRate" [(ngModel)]="enteredAnnualInterestRate">
+
+      </p>
+      <p>
+         <label for="tenure"> Tenure</label>
+         <input type="number" name="tenure" id="tenure" [(ngModel)]="enteredTenure">
+
+      </p>
+   </div>
+    <button type="submit">Calculate</button>
+</form>

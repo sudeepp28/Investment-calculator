@@ -8,3 +8,19 @@ body {
   background-color: #1e1d20;
   color: #ede8f7;
 }
+button {
+  width: 10rem;
+  padding: 0.5rem;
+  border: 1px solid #76c0ae;
+  border-radius: 0.25rem;
+  background-color: #83e6c0;
+  color: #1a1f1d;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #aaf1d6;
+}

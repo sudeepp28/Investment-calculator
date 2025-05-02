@@ -10,6 +10,20 @@ import { InvestmentService } from './app.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+isInvestmentCalculator=false;
+isEMICalculator=false;
 
+ShowInvestmentCalculator(){
+  this.isInvestmentCalculator=!this.isInvestmentCalculator
+  if(this.isEMICalculator){
+    this.isEMICalculator=!this.isEMICalculator
+  }
+}
+ShowEMICalculator(){
+this.isEMICalculator=!this.isEMICalculator
+if(this.isInvestmentCalculator){
+  this.isInvestmentCalculator=!this.isInvestmentCalculator
+}
+}
 
 }

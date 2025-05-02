@@ -1,6 +1,6 @@
 import { Component, inject, } from '@angular/core';
 
-import { InvestmentService } from '../app.service';
+import { InvestmentService } from '../../app.service';
 
 @Component({
   selector: 'app-results',

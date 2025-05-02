@@ -1,9 +1,22 @@
 <header>
  <app-header/>
 </header>
+<div class="buttons">
+  <button (click)="ShowInvestmentCalculator()">Investment Calculator</button>
+<button (click)="ShowEMICalculator()">EMI Calculator</button>
+</div>
 <main>
+ @if(isInvestmentCalculator){
   <div class="user">
     <app-user />
   </div>
   <div class="result"><app-results /></div>
+ }
+ @else if(isEMICalculator){
+  <div class="user">
+    <app-emiuser></app-emiuser>
+  </div>
+  <div class="result"><app-emiresults></app-emiresults></div>
+ }
+  
 </main>

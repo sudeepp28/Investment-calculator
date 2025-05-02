@@ -1,0 +1,36 @@
+@if(!results){
+    <p class="center">Please enter some values and press "Calculate".</p>
+}
+
+@else {<table>
+    <thead>
+        <tr>
+            <th>Month</th>
+            <th>Balance</th>
+            <th>Interest </th>
+            <th>Emi</th>
+            <th>Principal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(result of results; track result.month){
+            <tr>
+                <td>{{result.month}}</td>
+                <td>{{result.balance|currency:"INR" }}</td>
+                <td>{{result.interest|currency:"INR"}}</td>
+                <td>{{result.emi|currency:"INR"}}</td>
+                <td>{{result.principal|currency:"INR"}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="total">
+  
+   
+    <p>Total Interest Paid :   {{totalInterest |currency:"INR"}}</p>
+ 
+    <p>EMI : {{results[0].emi | currency:"INR"}}</p>
+</div>
+
+}

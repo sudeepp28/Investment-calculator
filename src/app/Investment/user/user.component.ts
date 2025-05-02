@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { InvestmentService } from '../app.service';
+import { InvestmentService } from '../../app.service';
+
 
 
 
