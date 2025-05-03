@@ -1,8 +1,7 @@
-@if(!results){
+@if(!emiresults){
     <p class="center">Please enter some values and press "Calculate".</p>
 }
-
-@else {<table>
+@else  {<table>
     <thead>
         <tr>
             <th>Month</th>
@@ -13,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @for(result of results; track result.month){
+        @for(result of emiresults; track result.month){
             <tr>
                 <td>{{result.month}}</td>
                 <td>{{result.balance|currency:"INR" }}</td>
@@ -28,9 +27,9 @@
 <div class="total">
   
    
-    <p>Total Interest Paid :   {{totalInterest |currency:"INR"}}</p>
+    <p>Total Interest To Be Paid :   {{totalInterest |currency:"INR"}}</p>
  
-    <p>EMI : {{results[0].emi | currency:"INR"}}</p>
+    <p>EMI : {{emiresults[0].emi | currency:"INR"}}</p>
 </div>
 
 }
