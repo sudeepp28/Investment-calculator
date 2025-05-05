@@ -15,6 +15,7 @@ constructor(private emiService:InvestmentService){}
   enteredDownPayment=0
   enteredAnnualInterestRate=10
   enteredTenure=1
+  balance=this.enteredTotalAmout-this.enteredDownPayment
   onsubmit(){
     this.emiService.calculateEMI({
       totalAmount:this.enteredTotalAmout,

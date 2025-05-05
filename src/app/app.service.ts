@@ -30,7 +30,7 @@ export class InvestmentService{
       }
       emiresultsData?:emiResults[];
    
-
+     LoanAmount=0
   
   
       calculateEMI(data:emiDataInterface) {
@@ -45,7 +45,7 @@ export class InvestmentService{
         const schedule = [];
         let balance = loanAmount;
         let totalInterestPaid=0
-    
+        
         for (let i = 1; i <= months; i++) {
           const interest = balance * monthlyInterestRate;
           const principal = emi - interest;
@@ -61,6 +61,6 @@ export class InvestmentService{
           });
         }
         this.emiresultsData=schedule;
-        
+        this.LoanAmount=loanAmount;
         }
 }

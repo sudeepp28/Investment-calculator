@@ -15,4 +15,7 @@ export class EmiResultsComponent {
    get totalInterest(): number {
     return this.emiresults?.reduce((sum, item) => sum + parseFloat(item.interest), 0) ?? 0;
   }
+  get balance(){
+    return this.investmentService.LoanAmount
+  }
 }
